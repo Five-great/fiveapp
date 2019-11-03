@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!-- LeanCloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <link href="login.css" rel="stylesheet">
+    <script type="text/javascript" src="../initLeanCloud.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="fiveui_nav">
+        <ul>
+            <li role="presentation" class="active"><a href="login.html">登录</a></li>
+            <li role="presentation"><a href="../signup/signup.html">注册</a></li>
+        </ul>
+    </div>
+</header>
+<div>
+    <form class="fiveui-signin">
+        <div style="height: 80px"></div>
+        <div>
+            <h2 class="fiveui-title" style="margin-top: 20px;margin-bottom: 80px;">欢 迎 登 陆</h2>
+        </div>
+        <div  class="fiveui_cell">
+            <label for="inputUsername" class="fiveui_label">账号</label>
+            <input type="username" id="inputUsername" class="fiveui_input" placeholder="账号/邮箱/手机号" required autofocus>
+        </div>
+        <div  class="fiveui_cell">
+            <label for="inputPassword" class="fiveui_label">密码</label>
+            <input type="password" id="inputPassword" class="fiveui_input" placeholder="Password" required>
+        </div>
+        <div  class="fiveui_cell">
+        </div>
+        <!--<div  class="fiveui_cell">
+            <label for="inputPhoneCode" class="fiveui_cell_primary">验证码</label>
+            <div class="  fiveui_cell_ft ">
+                <input type="phoneCode" id="inputPhoneCode" class="fiveui_input" placeholder="  验证码" required>
+            </div>
+            <div class="fiveui_cell_ft">
+                <input type="button" class="fiveui_btn  fiveui_btn_mini fiveui_btn_primary" onclick ="clickButton(this)" value="发送"/>
+            </div>
+        </div>-->
+        <div style="height: 80px"></div>
+        <button class="fiveui_btn fiveui_btn_primary" type="submit"> 登    陆 </button>
+        <div style="height: 50px"></div>
+    </form>
+</div> <!-- /container -->
+
+</body>
+</html>

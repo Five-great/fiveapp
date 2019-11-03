@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>个人中心</title>
+    <link href="../fonts/iconfont.css" rel="stylesheet"/>
+    <link href="../../base.css" rel="stylesheet"/>
+    <link href="../../index.css" rel="stylesheet"/>
+    <!-- LeanCloud -->
+    <script src="https://unpkg.com/leancloud-storage/dist/av.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="../initLeanCloud.js"></script>
+    <script type="text/javascript" src="../reuseMethods.js"></script>
+    <script type="text/javascript" src="UserCenter.js"></script>
+
+</head>
+<body>
+<nav class="nav-bar nav-bar-tab">
+    <a href="../../index.html" class="nav-tab-item ">
+        <span class="nav-icon icon-uniE90A"></span>
+        <span class="nav-tab-label">首页</span>
+    </a>
+    <a href="userFirm.html" class="nav-tab-item nav-active">
+        <span class="nav-icon icon-uniE90B"></span>
+        <span class="nav-tab-label">我的</span>
+    </a>
+</nav>
+<!-- 个人中心 user-->
+<div class="setBg-box"></div>
+<div class="cy-user">
+    <div class="userPu userInfo-detail">
+        <script id="userInfo" type="text/x-handlebars-template">
+        <!-- 头像部分 -->
+        <div class="userPu-h">
+            <div class="user-h-img"><img src="../../NAZA1.png"></div>
+            <div class="user-h-text">
+                <div class="user-name">{{nickname}}
+                    <a href="userUpgrade.html" class="outsider">
+                       <!-- <div class="bg-iconvip"></div>
+                        <span class="icon-vip0"></span>-->
+
+                    </a>
+                </div>
+                <div class="user-association"></div>
+            </div>
+        </div>
+
+        <!-- 头像部分 end-->
+        <!-- 资料板块 -->
+        <div class="datum-box">
+            <ul class="datum-list">
+                <li class="dropdown">
+                    <a href="#">
+                        <h1 data-toggle="dropdown" class="vtitle"><i class="ba-color ba-color1 icon-uniE952"></i><b>我的积分</b><span class="user-money">{{integral}}</span></h1>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Bill/Bill.html">
+                        <h1 data-toggle="dropdown" class="vtitle"><i class="ba-color ba-color7 icon-uniE966"></i><b>账户流水</b><span class="icon-uniE926"></span></h1>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="../UserInfo/UserInfo.html">
+                        <h1 data-toggle="dropdown" class="vtitle"><i class="ba-color ba-color2 icon-uniE953"></i><b>我的详情</b><span class="icon-uniE926"></span></h1>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Recharge/Recharge.html">
+                        <h1 data-toggle="dropdown" class="vtitle">
+                            <i class="ba-color icon-uniE93D"></i>
+                            <b>积分充值</b>
+
+                        </h1>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">
+                        <h1 data-toggle="dropdown" class="vtitle">
+                            <i class="ba-color ba-color3 icon-uniE901"></i>
+                            <b>设置</b>
+                            <span class="icon-uniE926"></span>
+                        </h1>
+                    </a>
+                </li>
+            </ul>
+            <!--<a href="validation.html" class="btn btn-max btn-green">交换名片</a>
+            <a href="javascript:;" class="btn btn-max btn-green">发送信息</a>-->
+            <!--<a href="javascript:;" class="btn btn-max btn-red">注销</a>-->
+        </div>
+        <!-- 资料板块 end-->
+        </script>
+    </div>
+</div>
+<div style="width: 98%;text-align: center">
+    <button class = 'btn btn-max btn-red' style="width: 80%;display: inline">
+    <ul class="nav pull-right">
+        <li role="presentation"><a href="#" onclick="logout()">退出登录</a></li>
+    </ul>
+    </button>
+</div>
+<!-- 个人中心 user end-->
+<!-- 引用的js文件 -->
+<script >
+
+
+  /*用户中心-折叠面板*/
+  var dropdown = document.querySelectorAll('.dropdown');
+  var dropdownArray = Array.prototype.slice.call(dropdown,0);
+  dropdownArray.forEach(function(el){
+    var button = el.querySelector('h1[data-toggle="dropdown"]'),
+      menu = el.querySelector('.dropdown-menu'),
+      arrow = button.querySelector('span.icon-uniE926');
+
+    button.onclick = function(event) {
+      if(!menu.hasClass('show')) {
+        menu.classList.add('show');
+        menu.classList.remove('hide');
+        arrow.classList.add('icon-23');
+        arrow.classList.remove('icon-uniE926');
+        event.preventDefault();
+      }
+      else {
+        menu.classList.remove('show');
+        menu.classList.add('hide');
+        arrow.classList.remove('icon-23');
+        arrow.classList.add('icon-uniE926');
+        event.preventDefault();
+      }
+    };
+  })
+
+  Element.prototype.hasClass = function(className) {
+    return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+  };
+</script>
+</body>
+</html>

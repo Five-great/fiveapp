@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>demo</title>
+    <link href="src/fonts/iconfont.css" rel="stylesheet"/>
+    <link href="base.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
+    <!-- LeanCloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="initLeanCloud.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</head>
+<body>
+<div>
+    <header>
+        <div class="header">
+            <a href="index.html" class="returnA"><h1 class="htitle">LOGO</h1></a>
+            <div class="hmap" id="gomap"><span class="icon-uniE902"></span>四川</div>
+            <div class="head-input-row head-search">
+                <input id="search" type="search" placeholder="搜索信息" >
+                <span class=" head-icon-left icon-uniE90F"></span>
+                <span class=" head-icon-right icon-uniE939"></span>
+            </div>
+        </div>
+    </header>
+    <div style="height: 2.5rem;"></div>
+</div>
+<nav class="nav-bar nav-bar-tab">
+    <a class="nav-tab-item nav-active">
+        <span class="nav-icon icon-uniE90A"></span>
+        <span class="nav-tab-label">首页</span>
+    </a>
+    <a href="src/UserCenter/UserCenter.html" class="nav-tab-item">
+        <span class="nav-icon icon-uniE90B"></span>
+        <span class="nav-tab-label">我的</span>
+    </a>
+</nav>
+<div class="all_box">
+    <!-- 轮播图 -->
+    <div class="m-slider" id="slider">
+        <div class="ks_dbox ks_ts">
+            <div class="ks_wrap">
+                <img src="timg.gif">
+            </div>
+        </div>
+        <div class="ks-circles"><ul class="ks_wt"></ul></div>
+    </div>
+    <!-- 轮播图 end-->
+    <!-- 功能板块 -->
+    <div class="big_button">
+        <div class="big_left">
+            <div class="big_left_p"><a href="src/UserCenter/UserCenter.html"><span class="icon-uniE92C"></span><h3>我的中心</h3></a></div>
+            <div class="big_left_p2"><a href="src/login/login.html"><h3>申请加入</h3></a></div>
+            <div class="ind-bar"></div>
+        </div>
+        <div class="big_right">
+            <div class="big_rigt_p plate_a fl">
+                <a href="#"><span class="icon-17"></span><h3>热门资讯</h3></a>
+                <div class="ind-bar2"></div>
+            </div>
+            <div class="big_rigt_p plate_b fr">
+                <a href="#"><span class="icon--01"></span><h3>专家风采</h3></a>
+                <div class="ind-bar3"></div>
+            </div>
+            <div class="big_rigt_p plate_c fl">
+                <a href="#"><span class="icon-uniE932"></span><h3>活动展示</h3></a>
+                <div class="ind-bar2"></div>
+            </div>
+            <div class="big_rigt_p plate_d fr" >
+                <a href="#"><span class="icon-uniE93B"></span><h3>分析走势</h3></a>
+                <div class="ind-bar3"></div>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+
+    <!-- 功能板块 end-->
+    <!-- 会员风采 -->
+    <div class="m-Mien">
+        <b><em></em>知名专家</b>
+        <ul class="userLists-detail">
+            <script id="userLists-list" type="text/x-handlebars-template">
+            {{#each userLists}}
+                    <li>
+                        <a href="MienDetails.html" class="cl">
+                            <img src="NAZA1.png" style="width: 80px">
+                            <div class="mienIntro" style="float: right;">
+                               <h1> 昵称:{{userName}}</h1>
+                                <p>积分:{{userIntegral}}</p>
+                                <p>邮箱:{{userEmail}}</p>
+                                 <p>地址:{{userAddress}}</p>
+                            </div>
+                        </a>
+                    </li>
+                {{/each}}
+            </script>
+        </ul>
+        <div class="m-Mien-m">
+            <a href="#">查看更多</a>
+        </div>
+    </div>
+    <!-- 会员风采 end-->
+    <!-- 协会活动列表 -->
+    <div class="dynamic-list activity-list">
+        <div class="dynamic-list-head">
+            <i class="dynamic-i-l icon-uniE93D"></i>
+            <b>热门活动</b>
+            <a href="activityList.html"><i class="dynamic-i-r icon-uniE906 fr"></i></a>
+        </div>
+        <ul class="eventreminder">
+            <li>
+                <a href="activity.html">
+                    <div class="A-cimg">
+                        <img src="NAZA1.png">
+                        <span class="i-activity p-free">免费</span>
+                        <span class="i-activity p-number">246人报名</span>
+                        <span class="activity-s activity-s-1">正在报名</span>
+                    </div>
+                    <div class="eventreminder-list">
+                        <p class="activity-h1">联通50Km徒步活动</p>
+                        <p class="activity-TimeXh"><span class="fr">5分钟前</span> <span class="event-xh">联通活动部</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="activity.html">
+                    <div class="A-cimg">
+                        <img src="NAZA1.png">
+                        <span class="i-activity p-number">246人报名</span>
+                        <span class="activity-s activity-s-2">活动进行中</span>
+                    </div>
+                    <div class="eventreminder-list">
+                        <p class="activity-h1">精装新品，火热抢购中</p>
+                        <p class="activity-TimeXh"><span class="fr">今天 10:40</span> <span class="event-xh">工商社团</span></p>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 协会活动列表 end-->
+    <!-- 协会动态列表 -->
+    <ul class="dynamic-list">
+        <div class="dynamic-list-head">
+            <i class="dynamic-i-l icon-uniE925"></i>
+            <b>热门动态</b>
+            <i class="dynamic-i-r icon-uniE906 fr"></i>
+        </div>
+        <li>
+            <a href="associationDt.html">
+                <img class="cy-media-object pull-left" src="NAZA1.png">
+                <div class="cy-media-body">
+                    <h3>互联网+ | 发家致富就是这么简单</h3>
+                    <p class="cy-ellipsis">雷军说过：“只要站在风口，猪也能飞起来”毫无疑问
+                        现在“互联网+”的风头一时无两，究竟是为</p>
+                    <p class="cy-ellipsis cy-heatTime">
+                        <span><i class="icon-uniE92F"></i>149</span>&nbsp;&nbsp;
+                        <span><i class="icon-uniE930"></i>30</span>
+                        <span class="fr">5分钟前</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img class="cy-media-object pull-left" src="NAZA1.png">
+                <div class="cy-media-body">
+                    <h3> 那吒红遍全球</h3>
+                    <p class="cy-ellipsis">那吒之魔童降世</p>
+                    <p class="cy-ellipsis cy-heatTime">
+                        <span><i class="icon-uniE92F"></i>132</span>&nbsp;&nbsp;
+                        <span><i class="icon-uniE930"></i>8</span>
+                        <span class="fr">2019-5-4</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img class="cy-media-object pull-left" src="NAZA1.png">
+                <div class="cy-media-body">
+                    <h3>傲饼</h3>
+                    <p class="cy-ellipsis">哈哈哈  那咋  好看</p>
+                </div>
+                <p class="cy-ellipsis cy-heatTime">
+                    <span><i class="icon-uniE92F"></i>456</span>&nbsp;&nbsp;
+                    <span><i class="icon-uniE930"></i>30</span>
+                    <span class="fr">2019-5-2</span>
+                </p>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<!-- 协会动态列表 end-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

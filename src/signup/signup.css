@@ -1,0 +1,155 @@
+body, html {
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.fiveui_signup{
+    style : "margin:8px";
+}
+
+.fiveui-title {
+    text-align: center;
+    font-size: 34px;
+    color: #3cc51f;
+    font-weight: 400;
+    margin: 0 15%;
+}
+
+.fiveui_cell {
+    padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.fiveui_cell:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    left: 15px;
+}
+.fiveui_label {
+    display: block;
+    width: 105px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+.fiveui_cell_primary {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+
+.fiveui_input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: 1.41176471em;
+    line-height: 1.41176471;
+}
+
+.fiveui_cell_ft {
+    text-align: right;
+    color: #888;
+}
+
+
+fiveui_btn.fiveui_btn_mini {
+    width: 117px;
+    line-height: 1.9;
+    font-size: 14px;
+    padding: 0 .75em;
+    display: inline-block;
+}
+
+button.fiveui_btn, input.fiveui_btn {
+    width: 100%;
+    border-width: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+
+.fiveui_btn {
+    background-color: #04be02;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 2.33333333;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: hidden;
+}
+
+.fiveui_btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,.2);
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+.fiveui_nav ul{
+    list-style: none;
+    float: right;
+
+}
+
+.fiveui_nav ul li{
+    color: #0000FF;
+    float: left;
+    margin: 0.5rem;
+
+}
+.fiveui_nav ul li a {
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    display: block;
+    padding: 1px 2px;
+}

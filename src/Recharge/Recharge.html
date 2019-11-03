@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>积分充值</title>
+    <link href="../fonts/iconfont.css" rel="stylesheet"/>
+    <link href="../../base.css" rel="stylesheet"/>
+    <link href="../../index.css" rel="stylesheet"/>
+    <link href="Recharge.css" rel="stylesheet"/>
+    <!-- LeanCloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./../initLeanCloud.js"></script>
+    <script type="text/javascript" src="./../reuseMethods.js"></script>
+    <script type="text/javascript" src="Recharge.js"></script>
+
+</head>
+</head>
+<body>
+<div>
+    <header>
+        <div class="header">
+            <h1>积分充值</h1>
+            <a href="../UserCenter/UserCenter.html" class="return"><i class="icon-16"></i></a>
+        </div>
+    </header>
+    <div style="height: 2.5rem;"></div>
+</div>
+<div class="container ">
+    <form class="new-Recharge">
+        <div  class="fiveui_cell">
+            <label for="integral" class="fiveui_label">待充值积分</label>
+            <input type="number"id="integral" class="form-control" placeholder="待充值积分" required autofocus>
+        </div>
+        <div  class="fiveui_cell">
+            <label for="bank" class="fiveui_label">充值凭证</label>
+            <input type="text" id="bank" class="form-control" placeholder="充值凭证" required>
+        </div>
+        <div  class="fiveui_cell">
+            <label for="bankCard" class="fiveui_label">银行卡号</label>
+            <input type="text" id="bankCard" class="form-control" placeholder="银行卡号" required>
+        </div>
+        <div  class="fiveui_cell">
+            <label for="inputDescription" class="fiveui_label">备注</label>
+            <textarea type="text" id="inputDescription" class="st-input-h form-control" placeholder="备注" ></textarea>
+        </div>
+        <div  class="fiveui_cell"></div>
+        <button class="fiveui_btn btn-green" type="submit">提交充值</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
