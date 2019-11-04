@@ -16,12 +16,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
     <script type="text/javascript" src="../initLeanCloud.js"></script>
     <script type="text/javascript" src="../reuseMethods.js"></script>
     <script type="text/javascript" src="UserInfo.js"></script>
 </head>
 <body>
-
+<script src="address.js"></script>
+<script src="City.js"></script>
 <nav class="nav-bar nav-bar-tab">
     <a href="../../index.html" class="nav-tab-item ">
         <span class="nav-icon icon-uniE90A"></span>
@@ -104,6 +106,13 @@
                             <div  class="fiveui_cell">
                                 <label for="inputMobilePhone" class="fiveui_label">手机号</label>
                                 <input type="username" id="inputMobilePhone" class="fiveui_input" placeholder="MobilePhone" required value="{{mobilePhone}}"/>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <div class="fiveui_cell">
+                                <label for="AddressArea" class="fiveui_label">地区</label>
+                                <input type="username" class="fiveui_input" readonly id="AddressArea"
+                                       placeholder="{{addressArea}}">
                             </div>
                         </li>
                         <li class="dropdown">

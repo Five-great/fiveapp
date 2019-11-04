@@ -5,6 +5,7 @@ var username ;
 var email;
 var mobilePhone ;
 var address ;
+var addressArea;
 var qqNumber ;
 var nickname2 ;
 function setupData() {
@@ -20,11 +21,13 @@ function setupData() {
     email = userInfos[0]._serverData.email;
     mobilePhone = userInfos[0]._serverData.mobilePhone ;
     address = userInfos[0]._serverData.address;
+    addressArea = userInfos[0]._serverData.addressArea;
     qqNumber = userInfos[0]._serverData.qqNumber ;
     nickname2 = nickname;
     objectId = userInfos[0].id;
     var context = {
       address,
+      addressArea,
       qqNumber,
       mobilePhone,
       email,
@@ -38,6 +41,7 @@ function setupData() {
     var template = Handlebars.compile(source);
     var html = template(context);
     $('.userInfo-detail').html(html);
+    getCity();
   });
 
 };
@@ -54,6 +58,7 @@ function upData() {
   var nowQQNumber = $('#inputQQNumber').val();
   var nowMobilePhone = $('#inputMobilePhone').val();
   var nowAddress = $('#inputAddress').val();
+  var nowAddressArea = $('#AddressArea').val();
   try{
     nowNickName == nickname ? 0 :upNowData('nickname',nowNickName) ;
     nowEmail == email? 0 : AV.User.current().setEmail(nowEmail);
@@ -62,6 +67,7 @@ function upData() {
     nowMobilePhone == mobilePhone ? 0 : AV.User.current().setMobilePhoneNumber(nowMobilePhone);
     nowMobilePhone == mobilePhone ? 0 :upNowData('mobilePhone',nowMobilePhone ) ;
     nowAddress == address ? 0 :upNowData('address',nowAddress ) ;
+    nowAddressArea == addressArea ? 0 : upNowData('addressArea', nowAddressArea);
     AV.User.current().save();
     alert('修改数据成功');
     setupData();
@@ -72,6 +78,23 @@ function upData() {
 
 }
 
+function getCity() {
+  var $target = $('#AddressArea');
+  console.log($target);
+  $target.citySelect();
+  $target.on('click', function (event) {
+    event.stopPropagation();
+    $target.citySelect('open');
+
+  });
+  $('#CityClose').on('click', function () {
+    $target.citySelect('close');
+  });
+
+  $target.on('done.ydui.cityselect', function (ret) {
+    $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+  });
+}
 
 function clickButton() {
   if (isCurrentUser()) {

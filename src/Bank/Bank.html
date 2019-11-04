@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>银行卡绑定</title>
+    <link href="../fonts/iconfont.css" rel="stylesheet"/>
+    <link href="../../base.css" rel="stylesheet"/>
+    <link href="../../index.css" rel="stylesheet"/>
+    <link href="Bank.css" rel="stylesheet"/>
+    <!-- LeanCloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./../initLeanCloud.js"></script>
+    <script type="text/javascript" src="./../reuseMethods.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="Bank.js"></script>
+<div>
+    <header>
+        <div class="header">
+            <h1>绑定银行卡</h1>
+            <a href="../UserCenter/UserCenter.html" class="return"><i class="icon-16"></i></a>
+        </div>
+    </header>
+    <div style="height: 2.5rem;"></div>
+</div>
+<div class="container ">
+    <div style="height: 6.5rem;"></div>
+    <form class="new-Recharge">
+        <div class="fiveui_cell">
+            <label for="openBank" class="fiveui_label">开户支行</label>
+            <input type="username" list="browsers" id="openBank" class="fiveui_input" placeholder="---储蓄卡---" required/>
+            <datalist id="browsers">
+
+            </datalist>
+        </div>
+        <div class="fiveui_cell">
+            <label for="bankCard" class="fiveui_label">银行卡号</label>
+            <input type="username" id="bankCard" class="fiveui_input" placeholder="银行卡号" required>
+        </div>
+        <div class="fiveui_cell">
+            <label for="bankUser" class="fiveui_label">持卡人</label>
+            <input type="username" id="bankUser" class="fiveui_input" placeholder="持卡人" required>
+        </div>
+        <div class="fiveui_cell">
+            <label for="inputDescription" class="fiveui_label">备注</label>
+            <input type="textarea" id="inputDescription" class="fiveui_input" placeholder="备注" required>
+        </div>
+        <div class="fiveui_cell"></div>
+        <div style="height: 2.5rem;"></div>
+        <button class="fiveui_btn btn-green" type="submit">立刻绑定</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -42,7 +42,7 @@ function setupData() {
 setupData();
 
 
-
+//getAPI();
 
 function getAPI() {
   var url = 'http://api.avatardata.cn/ActNews/LookUp?key=c3801764691441b79e45a9a621637a00';

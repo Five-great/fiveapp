@@ -1,5 +1,4 @@
 var Recharge = AV.Object.extend('Recharge');
-console.log(Recharge);
 
 function releaseNewRecharge() {
   var integral =parseFloat($('#integral').val());
