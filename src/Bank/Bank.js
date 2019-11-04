@@ -19,6 +19,7 @@ function releaseNewBank() {
   rank.set('bankCard', bankCard);
   rank.set('openBank ', openBank);
   rank.set('description', description);
+  rank.set('owner', currentUser);
   rank.save().then(function () {
     window.location.href = "../UserCenter/UserCenter.html";
   }, function (error) {
