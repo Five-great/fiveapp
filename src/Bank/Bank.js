@@ -22,7 +22,7 @@ function releaseNewBank() {
   rank.set('description', description);
   rank.set('owner', currentUser);
   rank.save().then(function () {
-    window.location.href = "../UserCenter/UserCenter.html";
+    window.location.href = "BankList.html";
   }, function (error) {
     alert(JSON.stringify(error));
   });
