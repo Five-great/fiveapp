@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-    <title>账户流水</title>
+    <title>银行卡绑定</title>
     <link href="../fonts/iconfont.css" rel="stylesheet"/>
     <link href="../../base.css" rel="stylesheet"/>
     <link href="../../index.css" rel="stylesheet"/>
@@ -16,10 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="Bill.css" rel="stylesheet">
+    <link href="Bank.css" rel="stylesheet">
     <script type="text/javascript" src="../initLeanCloud.js"></script>
     <script type="text/javascript" src="../reuseMethods.js"></script>
-    <script type="text/javascript" src="Bill.js"></script>
+    <script type="text/javascript" src="BankList.js"></script>
 </head>
 <body>
 <nav class="nav-bar nav-bar-tab">
@@ -35,37 +35,42 @@
 <div>
     <header>
         <div class="header">
-            <h1>账户流水</h1>
+            <h1>银行卡绑定</h1>
             <a href="../UserCenter/UserCenter.html" class="return"><i class="icon-16"></i></a>
         </div>
     </header>
     <div style="height: 2.5rem;"></div>
 </div>
-<!-- 账户流水 Bill start -->
+<!-- 银行卡 BankList start -->
 <div class="r-Record">
-    <!-- Recharges list content -->
-        <ul class="record recharges-detail">
-            <script id="recharges-list" type="text/x-handlebars-template">
-            {{#each recharges}}
-                    <li>
-                        <a href="javascript:;">
-                            <p class="recordUse">充值<span class="addMoney">{{{rechargeIntegral}}}</span></p>
-                            <p class="recordTime">{{{releaseTime}}}</p>
-                        </a>
-                        <div class="recordDetail">
-                            <dl><dt>来　　自：</dt><dd>{{{ownerUsername}}}</dd></dl>
-                            <dl><dt>当前状态：</dt><dd>充值成功</dd></dl>
-                            <dl><dt>充值时间：</dt><dd>{{{releaseTime}}}</dd></dl>
-                            <dl><dt>支付流水：</dt><dd>{{{rechargeBank}}}</dd></dl>
-                            <dl><dt>交易卡号：</dt><dd>{{{rechargeBankCard}}}</dd></dl>
-                            <dl><dt>备注：</dt><dd>{{{rechargeDescription}}}</dd></dl>
-                        </div>
-                    </li>
+    <!-- BankLists list content -->
+    <ul class="record bankLists-detail">
+        <script id="bankLists-list" type="text/x-handlebars-template">
+            {{#each bankLists}}
+            <li>
+                <div class="fiveui_card">
+                    <p class="recordUse"> 开户行 <span class="addMoney">{{{bankListOpenBank}}}</span></p>
+                    <div class="recordDetail">
+                        <dl>
+                            <dt>持 卡 人：</dt>
+                            <dd>{{{bankListBankUser}}}</dd>
+                        </dl>
+                        <dl>
+                            <dt> 卡 号：</dt>
+                            <dd>{{{bankListBankCard}}}</dd>
+                        </dl>
+                        <dl>
+                            <dt> 备 注：</dt>
+                            <dd>{{{bankListDescription}}}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </li>
             {{/each}}
         </script>
-        </ul>
+    </ul>
 </div>
-<!-- 账户流水 Bill end-->
+<!--  bankLists end-->
 
 </body>
 </html>

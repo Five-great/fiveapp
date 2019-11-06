@@ -7,8 +7,6 @@ function setupData() {
   // LeanCloud - 查询
   // https://leancloud.cn/docs/leanstorage_guide-js.html#查询
   var query = new AV.Query('Recharge');
-
-  console.log(AV.User.current());
   query.equalTo('owner', AV.User.current());
   query.include('owner');
   query.descending('createdAt');

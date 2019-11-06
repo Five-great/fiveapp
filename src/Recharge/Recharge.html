@@ -30,20 +30,46 @@
 <div class="container ">
     <form class="new-Recharge">
         <div  class="fiveui_cell">
-            <label for="integral" class="fiveui_label">待充值积分</label>
-            <input type="number"id="integral" class="form-control" placeholder="待充值积分" required autofocus>
+            <label for="openBankTo" class="fiveui_label">收款银行:</label>
+            <input type="username" list="browsers" id="openBankTo" class="fiveui_input" placeholder="---储蓄卡---"
+                   required/>
+            <datalist id="browsers">
+            </datalist>
+        </div>
+        <div class="fiveui_cell">
+            <label for="bankCardTo" class="fiveui_label">收款卡号</label>
+            <input type="username" id="bankCardTo" class="fiveui_input" placeholder="银行卡号" required>
+        </div>
+        <div class="fiveui_cell">
+            <label for="bankCardUserTo" class="fiveui_label">收款户名</label>
+            <input type="username" id="bankCardUserTo" class="fiveui_input" placeholder="持卡人" required>
+        </div>
+        <div class="fiveui_cell">
+            <label for="openBank" class="fiveui_label">付款银行:</label>
+            <input type="username" list="browsers2" id="openBank" class="fiveui_input" placeholder="---储蓄卡---"
+                   required/>
+            <datalist id="browsers2">
+            </datalist>
+        </div>
+        <div class="fiveui_cell">
+            <label for="bankCard" class="fiveui_label">付款卡号</label>
+            <input type="username" id="bankCard" class="fiveui_input" placeholder="银行卡号" required>
+        </div>
+        <div class="fiveui_cell">
+            <label for="bankCardUser" class="fiveui_label">付款户名</label>
+            <input type="username" id="bankCardUser" class="fiveui_input" placeholder="持卡人" required>
+        </div>
+        <div  class="fiveui_cell">
+            <label for="integral" class="fiveui_label">待充金额</label>
+            <input type="username" id="integral" class="fiveui_input" placeholder="待充金额" required autofocus>
         </div>
         <div  class="fiveui_cell">
             <label for="bank" class="fiveui_label">充值凭证</label>
-            <input type="text" id="bank" class="form-control" placeholder="充值凭证" required>
-        </div>
-        <div  class="fiveui_cell">
-            <label for="bankCard" class="fiveui_label">银行卡号</label>
-            <input type="text" id="bankCard" class="form-control" placeholder="银行卡号" required>
+            <input type="username" id="bank" class="fiveui_input" placeholder="充值凭证/流水号" required>
         </div>
         <div  class="fiveui_cell">
             <label for="inputDescription" class="fiveui_label">备注</label>
-            <textarea type="text" id="inputDescription" class="st-input-h form-control" placeholder="备注" ></textarea>
+            <input type="username" id="inputDescription" class="fiveui_input" placeholder="备注">
         </div>
         <div  class="fiveui_cell"></div>
         <button class="fiveui_btn btn-green" type="submit">提交充值</button>

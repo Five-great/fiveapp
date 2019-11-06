@@ -25,7 +25,7 @@ function signup() {
   }
 };
 
-
+/* 暂停 60S*/
 function clickButton(obj){
   var obj = $(obj);
   obj.attr("disabled","disabled");/*按钮倒计时*/
@@ -42,9 +42,14 @@ function clickButton(obj){
   }, 60000);
 }
 
+var timeFlag = null;
 $(function() {
   $(".fiveui-signup").on('submit', function(e) {
     e.preventDefault();
-    signup();
+    if (timeFlag !== null) {
+      timeFlag
+      signup();
+    }
+
   });
 });

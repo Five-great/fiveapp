@@ -50,7 +50,7 @@ body {
     transform-origin: 0 0;
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
-    left: 15px;
+
 }
 .fiveui_label {
     display: block;

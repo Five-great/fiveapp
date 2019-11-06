@@ -96,12 +96,19 @@ function getCity() {
   });
 }
 
+var timeFlag = null;
 function clickButton() {
-  if (isCurrentUser()) {
-        upData();
-  } else {
-    window.location.href = "../login/login.html";
+  if (timeFlag === null) {
+    timeFlag = setTimeout(function () {
+      timeFlag = null;
+    }, 3000);
+    if (isCurrentUser()) {
+      upData();
+    } else {
+      window.location.href = "../login/login.html";
+    }
   }
+
 }
 
 $(function() {
