@@ -19,7 +19,6 @@ function setupData() {
     var html = template(context);
     $('.userInfo-detail').html(html);
   });
-
 };
 
 function logout() {
@@ -27,9 +26,11 @@ function logout() {
   window.location.href = "../login/login.html";
 };
 
+
 $(function() {
   if (isCurrentUser()) {
-    setupData();
+     setupData();
+    
   } else {
     window.location.href = "../login/login.html";
   }
